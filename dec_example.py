@@ -2,7 +2,6 @@
 def meta_dec(arg):
 
     def dec_example(func):
-
         def inner(list_of_numbers):
             if isinstance(list_of_numbers, int):
                 return list_of_numbers ** list_of_numbers
@@ -23,6 +22,10 @@ def power(a):
     return a ** a
 
 
-nums = [1, 2, 3, 4, 5, 6]
+@meta_dec
+def sum_number(a):
+    return a + a
 
-print(power(nums))
+
+nums = [1, 2, 3, 4, 5, 6]
+print(sum_number(nums))
