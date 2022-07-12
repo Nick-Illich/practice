@@ -25,5 +25,5 @@ e = Employee(
 )
 
 profile = e.get_info()
-print(type(profile))
+print(profile)
 
